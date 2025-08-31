@@ -1,1 +1,1 @@
-{"root":["./src/globals.d.ts","./src/main.tsx","./src/vite-env.d.ts","./src/ui/app.tsx","./src/ui/screengrid.tsx","./src/ui/twitchchat.tsx","./src/ui/twitchembed.tsx","./src/ui/twitchplayer.tsx","./src/ui/icons.tsx","./src/ui/layouts.ts","./src/utils/share.ts"],"version":"5.9.2"}
+{"root":["./src/globals.d.ts","./src/main.tsx","./src/vite-env.d.ts","./src/ui/App.tsx","./src/ui/ScreenGrid.tsx","./src/ui/TwitchChat.tsx","./src/ui/TwitchEmbed.tsx","./src/ui/TwitchPlayer.tsx","./src/ui/icons.tsx","./src/ui/layouts.ts","./src/utils/share.ts"],"version":"5.9.2"}
