@@ -1,0 +1,1 @@
+{"root":["./src/globals.d.ts","./src/main.tsx","./src/vite-env.d.ts","./src/ui/app.tsx","./src/ui/screengrid.tsx","./src/ui/twitchembed.tsx","./src/ui/icons.tsx","./src/ui/layouts.ts","./src/utils/share.ts"],"version":"5.9.2"}
