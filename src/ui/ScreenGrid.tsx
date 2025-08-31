@@ -1,6 +1,6 @@
 import { Screen } from './App'
 import { X, Edit } from './icons'
-import { TwitchEmbed } from './TwitchEmbed'
+// chats-only: no TwitchPlayer; keep only TwitchChat
 import { TwitchChat } from './TwitchChat'
 
 export function ScreenGrid({
@@ -8,12 +8,16 @@ export function ScreenGrid({
   layout,
   onRemove,
   onChangeChannel,
+  // chats-only: drop status and refs
 }: {
   screens: Screen[]
   layout: { rows: number; cols: number }
   onRemove: (id: string) => void
   onChangeChannel: (id: string) => void
+  // onStatusChange?: (id: string, status: any) => void
+  // onRegisterRefs?: (refs: Array<React.RefObject<PlayerHandle>>) => void
 }) {
+  // chats-only: no refs to manage
   return (
     <div className="screens" style={{ gridTemplateColumns: `repeat(${layout.cols}, 1fr)` }}>
       {screens.map((s, i) => (
@@ -26,13 +30,8 @@ export function ScreenGrid({
               <X />
             </button>
           </div>
-          <div className="screen-body">
-            <div className="screen-video">
-              <TwitchEmbed channel={s.channel} />
-            </div>
-            <div className="screen-chat">
-              <TwitchChat channel={s.channel} />
-            </div>
+          <div className="screen-chat-only">
+            <TwitchChat channel={s.channel} />
           </div>
         </div>
       ))}

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Plus, Share2 } from './icons'
 import { ScreenGrid } from './ScreenGrid'
+// chats-only view; no TwitchPlayer imports needed
 import { getLayoutForCount } from './layouts'
 import { parseQuery, toQuery } from '../utils/share'
 
@@ -16,12 +17,15 @@ function newId() {
 
 export function App() {
   const [screens, setScreens] = useState<Screen[]>([])
+  // chats-only: no player statuses or refs
 
   // initialize from URL
   useEffect(() => {
     const qs = parseQuery(location.search)
     if (qs.channels && Array.isArray(qs.channels)) {
-      const initial = (qs.channels as string[]).map((c) => ({ id: newId(), channel: c }))
+      const initial = (qs.channels as string[])
+        .slice(0, 9)
+        .map((c) => ({ id: newId(), channel: c }))
       setScreens(initial)
     }
   }, [])
@@ -64,11 +68,11 @@ export function App() {
   return (
     <div className="app">
       <header className="topbar">
-        <h1>Multi twitch viewer</h1>
+  <h1>multichatter</h1>
         <div className="actions">
           <button className="btn" onClick={addScreen} title="Add screen">
             <Plus />
-            <span>Add</span>
+            <span>Add chat</span>
           </button>
           <button className="btn" onClick={share} title="Copy shareable URL">
             <Share2 />
@@ -86,7 +90,7 @@ export function App() {
       </main>
       {screens.length === 0 && (
         <div className="empty">
-          <p>Add a screen to start watching multiple streamers at once.</p>
+          <p>Add a chat to start following multiple conversations at once.</p>
         </div>
       )}
     </div>

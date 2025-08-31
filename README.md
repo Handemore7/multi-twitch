@@ -1,11 +1,11 @@
-# Multi‑Twitch Viewer
+# multichatter
 
-Watch multiple Twitch streamers at the same time. Add screens, change channels, and share the layout via URL.
+Follow multiple Twitch chats at the same time. Add chats, change channels, and share the layout via URL.
 
 ## Features
-- Add/remove screens dynamically
+- Add/remove chats dynamically
 - Auto grid layout based on count (2,4,6,9, ...)
-- Twitch embeds with autoplay muted
+- Twitch chat embeds
 - Shareable URL (?channels=shroud,riotgames,otknetwork)
 
 ## Dev
