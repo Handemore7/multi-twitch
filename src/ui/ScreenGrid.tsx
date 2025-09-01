@@ -1,7 +1,7 @@
 import { Screen } from './App'
-import { X, Edit } from './icons'
+import { X, Edit } from './icons.tsx'
 // chats-only: no TwitchPlayer; keep only TwitchChat
-import { TwitchChat } from './TwitchChat'
+import { TwitchChat } from './TwitchChat.tsx'
 
 export function ScreenGrid({
   screens,
@@ -23,10 +23,10 @@ export function ScreenGrid({
       {screens.map((s, i) => (
         <div key={s.id} className="screen">
           <div className="screen-controls">
-            <button className="icon" onClick={() => onChangeChannel(s.id)} title="Change channel">
+            <button className="icon" onClick={() => onChangeChannel(s.id)} title="Change channel" aria-label={`Change channel for ${s.channel}`}>
               <Edit />
             </button>
-            <button className="icon" onClick={() => onRemove(s.id)} title="Remove">
+            <button className="icon" onClick={() => onRemove(s.id)} title="Remove" aria-label={`Remove ${s.channel}`}>
               <X />
             </button>
           </div>

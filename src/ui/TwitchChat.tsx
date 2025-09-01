@@ -7,7 +7,7 @@ export function TwitchChat({ channel }: { channel: string }) {
   return (
     <iframe
       src={url}
-      title={`Chat ${channel}`}
+      title={`Twitch chat for ${channel}`}
       width="100%"
       height="100%"
       frameBorder={0}

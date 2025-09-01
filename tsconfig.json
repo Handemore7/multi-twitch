@@ -14,7 +14,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "."
+  "baseUrl": ".",
+  "allowImportingTsExtensions": true
   },
   "include": ["src"]
 }
